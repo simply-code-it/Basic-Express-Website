@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title #{title}: Express Website
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(href='stylesheets/bootstrap.css' rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    main
+      .container
+        header.d-flex.flex-wrap.justify-content-center.py-3.mb-4.border-bottom
+          a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-dark.text-decoration-none(href='/')
+            svg.bi.me-2(width='40' height='32')
+              use(xlink:href='#bootstrap')
+            span.fs-4 Express App
+          ul.nav.nav-pills
+            li.nav-item
+              a.nav-link.active(href='/' aria-current='page') Home
+            li.nav-item
+              a.nav-link(href='/about') About
+           
+            li.nav-item
+              a.nav-link(href='/contact') Contact
+    block content
+    footer 
+        p &copy; 2015, All Rights Reserved
+    script(src='javascripts/bootstrap.js')
